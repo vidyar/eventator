@@ -4,13 +4,14 @@ php:
 
 before_script:
     - sudo apt-get install -y libicu-dev libicu48
+    - sudo aptitude install php5-intl    
     - echo '' > ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
     - cp app/config/parameters.yml.dist app/config/parameters.yml
     - cp behat.yml.dist behat.yml
     - composer install --dev --prefer-source
     - app/console do:da:cr -e=test
     - app/console do:sc:cr -e=test --no-interaction
-
+    
     # If you use DB fixtures in your feature suite:
     # - app/console do:fi:lo --no-interaction -e=test > /dev/null
 
