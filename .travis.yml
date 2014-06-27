@@ -28,6 +28,7 @@ before_script:
     # - sh -e /etc/init.d/xvfb start
     # - sleep 5
 
+
 script:
     - bin/phpspec run -fpretty --verbose
     - bin/behat --no-snippets --verbose -fpretty
