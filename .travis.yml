@@ -4,7 +4,9 @@ php:
 
 before_script:
     - sudo apt-get install -y libicu-dev libicu48
-    - sudo apt-get install php5-intl    
+   
+    - yes '' | pecl upgrade intl
+   # - sudo apt-get install php5-intl    
     - echo '' > ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
     - cp app/config/parameters.yml.dist app/config/parameters.yml
     - cp behat.yml.dist behat.yml
