@@ -3,6 +3,7 @@ php:
     - 5.4
 
 before_script:
+    - sudo apt-get install libicu-dev
     - echo '' > ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
     - cp app/config/parameters.yml.dist app/config/parameters.yml
     - cp behat.yml.dist behat.yml
