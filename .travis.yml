@@ -9,6 +9,7 @@ before_script:
     - composer install --dev --prefer-source > /dev/null
     - app/console do:da:cr -e=test > /dev/null
     - app/console do:sc:cr -e=test --no-interaction > /dev/null
+
     # If you use DB fixtures in your feature suite:
     # - app/console do:fi:lo --no-interaction -e=test > /dev/null
 
@@ -25,7 +26,6 @@ before_script:
     # - java -jar selenium-server-standalone-2.28.0.jar > /dev/null &
     # - sh -e /etc/init.d/xvfb start
     # - sleep 5
-
 
 script:
     - bin/phpspec run -fpretty --verbose
