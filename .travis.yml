@@ -1,10 +1,12 @@
 language: php
-
+env:
+  - secure: C8772jP4tBkAjj2v7jwhqEqX7iYZpfTaOUDlHEokf8G/t41g4uzSge9MfmCGPEtwAKReE0xq197QwlWtw4TDE4PxKXw0sfl1a8a/AN/W8HLfkEBkKaFW2GN/U5W/2gcO9XGqJ2ibXUNam/4f9d9ko28OLGLh4POqnK6S5iCPguu6a70N9RlE827XHqpYy7wD4W35obYikdEwmhw2f11oAUXXVUwQeO8HHJdOH0wiLWD+2q230qTlSQ/VCG4MnWr7tPJSPhkJgVhcqLnY8NbAmmHPGMy6qjUwran1JOvwGwelrgMWjxBoB8jA0mGD2dcDeVlzwUGzaZ9uWBoVxQyHKg==
 
 php:
     - 5.4
 
 before_script:
+    - echo $key1 and $key2
     - echo '' > ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
     - cp app/config/parameters.yml.dist app/config/parameters.yml
     - cp behat.yml.dist behat.yml
